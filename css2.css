@@ -1,0 +1,302 @@
+/*Root + Font face*/
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+@font-face {
+    font-family: 'shree_devanagari_714regular';
+    src: url('shreedevanagari714-webfont.woff2') format('woff2'),
+         url('shreedevanagari714-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Classes + grid*/
+
+body {
+  font-family: shree_devanagari_714regular;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1.5fr 0.25fr;
+  grid-template-areas:
+    "nav nav nav"
+    "content1 content2 content3"
+    "footer footer footer";
+  grid-gap: 0.5rem;
+  font-weight: 800;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.footercontent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.container ul {
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  text-align: justify;
+}
+.container nav ul {
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
+}
+.some li {
+  margin-right: 45px;
+}
+.copyright{
+  margin-top: 35px
+}
+.kontakt {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.undertitel {
+  font-size: 1.25em;
+  text-decoration-color: black;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+header {
+  padding-top: 1%;
+}
+
+nav {
+  grid-area: nav;
+  font-size:30px;
+  font-weight: bold;
+}
+
+footer {
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  margin: 0px;
+}
+
+a {
+  text-align: center;
+  color: black;
+  display: block;
+  font-family: inherit;
+  text-decoration: inherit;
+  font-weight: normal;
+  margin: 0.1rem;
+}
+
+/*IDs*/
+
+#content1 {
+  background: #d1d1d1;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  opacity: 0.9;
+}
+
+#content2 {
+  background: #d1d1d1;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  opacity: 0.9;
+}
+
+#content3 {
+  background: #d1d1d1;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  opacity: 0.9;
+}
+#content4 {
+  background: #d1d1d1;
+  grid-area: content4;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  opacity: 0.9;
+}
+#content5 {
+  background: #d1d1d1;
+  grid-area: content5;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  opacity: 0.9;
+}
+#content6 {
+  background: #d1d1d1;
+  grid-area: content6;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  opacity: 0.9;
+}
+
+#card2 {
+  text-decoration-color: black;
+}
+
+/* ANIMATIONS */
+
+#content1 :hover {
+  opacity: 0.5;
+  transition-duration: 100ms;
+  transition-property: all;
+  transition-timing-function: ease-out;
+  transition-delay: 50ms;
+}
+
+#content2 :hover {
+  opacity: 0.5;
+  transition-duration: 100ms;
+  transition-property: all;
+  transition-timing-function: ease-out;
+  transition-delay: 50ms;
+}
+
+#content3 :hover {
+  opacity: 0.5;
+  transition-duration: 100ms;
+  transition-property: all;
+  transition-timing-function: ease-out;
+  transition-delay: 50ms;
+}
+
+#somehover :hover {
+  opacity: 0.5;
+  transition-duration: 100ms;
+  transition-property: all;
+  transition-timing-function: ease-out;
+  transition-delay: 50ms;
+}
+
+#card1:link, #card1:visited {
+    color: black;
+    font-size: 45px;
+    margin: -5%;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px grey;
+}
+
+#card1:hover, #card1:active {
+    color: #019191;
+    text-shadow: 2px 2px solid grey;
+}
+
+#card2:link, #card2:visited {
+    color: black;
+  /*  font-size: 25px;*/
+    font-weight: bolder;
+}
+
+#card2:hover, #card2:active {
+    color: black;
+    text-shadow: 2px 2px solid grey;
+}
+
+@media screen and (min-width: 1008px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+    grid-template-areas:
+      "nav nav nav"
+      "content1 content2 content3"
+      "footer footer footer";
+  }
+  .footercontent {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "some copyright kontakt"
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1007px)  {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "nav nav nav"
+      "content1 content2 content3"
+      "footer footer footer";
+  }
+  .footercontent {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "some some kontakt"
+  }
+  #card1:link, #card1:visited {
+      color: black;
+      font-size: 40px;
+      margin: -5%;
+      text-shadow: 1px 1px 2px grey;
+  }
+
+  #card1:hover, #card1:active {
+      color: #019191;
+      text-shadow: 2px 2px solid grey;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 640px) {
+  .container {
+    font-size: 20px;
+    padding-left: 1%;
+    padding-right: 1%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 0.2fr;
+    grid-template-areas:
+      "nav"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+  footer {
+    margin: -1px;
+  }
+  .footercontent {
+    margin-left: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr;
+    grid-template-areas:
+      "some"
+      "copyright"
+      "kontakt"
+      }
+  .copyright {
+    padding-bottom: 10px;
+    padding-right: 50px;
+  }
+  .kontakt {
+    padding-right: 100px;
+  }
+  #card1:link, #card1:visited {
+      color: black;
+      font-size: 35px;
+      margin: -5%;
+      text-shadow: 1px 1px 2px grey;
+  }
+
+  #card1:hover, #card1:active {
+      color: #019191;
+      text-shadow: 2px 2px solid grey;
+  }
+}
